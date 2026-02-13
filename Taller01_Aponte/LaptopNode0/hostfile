@@ -1,0 +1,7 @@
+node0 slots=4
+node1 slots=4
+node2 slots=4
+node3 slots=4
+node4 slots=4
+#sistemas@node5 slots=8
+#sistemas@node6 slots=8
