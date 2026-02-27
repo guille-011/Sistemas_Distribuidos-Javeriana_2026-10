@@ -24,10 +24,10 @@ Para compilar y ejecutar los códigos expuestos en este respositorio necesita:
 
 ## Resumen de contenidos
 
-| Nombre del fichero                          | Tema trabajado                              |
-|---------------------------------------------|---------------------------------------------|
-| Taller01_Aponte                             | Creación de Cluster y pruebas de rendimiento|
-
+| Nombre del fichero                          | Tema trabajado                                 |
+|---------------------------------------------|------------------------------------------------|
+| Taller01_Aponte                             | Creación de Cluster y pruebas de rendimiento   |
+| Taller02_Aponte                             | Creación de modelo cliente-servidor usando ZMQ |
 ---
 
 ## Desarrollos de contenido
@@ -43,3 +43,6 @@ Taller en grupo referente a todo el proceso de craeación de un cluster usando v
 - analisis_resultados.ipynb: Cuaderno en python que contiene todas las tablas generadas con los resultados para comprender los mismos.
 - Taller-1_SD_Ramirez-Aponte-Pico-Arboleda-Losada-Santos-Rendon.pdf: Documento pdf que contiene todo el proceso de análisis realizado a partir del taller.
 
+### Taller02_Aponte
+
+Taller

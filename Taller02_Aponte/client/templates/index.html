@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="grid">
+
+    <!-- Préstamo por ISBN -->
+    <section class="card">
+        <h2>📖 Préstamo por ISBN</h2>
+        <form hx-post="/loan-isbn" hx-target="#loan-isbn-result" hx-swap="innerHTML" hx-indicator="#loan-isbn-spinner">
+            <div class="form-group">
+                <label for="loan-isbn-isbn">ISBN:</label>
+                <input type="text" id="loan-isbn-isbn" name="isbn" placeholder="9780307474278" required>
+            </div>
+            <div class="form-group">
+                <label for="loan-isbn-borrower">Prestatario:</label>
+                <input type="text" id="loan-isbn-borrower" name="borrower" placeholder="Nombre completo" required>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                Solicitar Préstamo
+                <span id="loan-isbn-spinner" class="htmx-indicator spinner"></span>
+            </button>
+        </form>
+        <div id="loan-isbn-result" class="result-area"></div>
+    </section>
+
+    <!-- Préstamo por Título -->
+    <section class="card">
+        <h2>📖 Préstamo por Título</h2>
+        <form hx-post="/loan-title" hx-target="#loan-title-result" hx-swap="innerHTML" hx-indicator="#loan-title-spinner">
+            <div class="form-group">
+                <label for="loan-title-title">Título:</label>
+                <input type="text" id="loan-title-title" name="title" placeholder="Cien años de soledad" required>
+            </div>
+            <div class="form-group">
+                <label for="loan-title-borrower">Prestatario:</label>
+                <input type="text" id="loan-title-borrower" name="borrower" placeholder="Nombre completo" required>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                Solicitar Préstamo
+                <span id="loan-title-spinner" class="htmx-indicator spinner"></span>
+            </button>
+        </form>
+        <div id="loan-title-result" class="result-area"></div>
+    </section>
+
+    <!-- Consulta por ISBN -->
+    <section class="card">
+        <h2>🔍 Consulta por ISBN</h2>
+        <form hx-post="/query-isbn" hx-target="#query-isbn-result" hx-swap="innerHTML" hx-indicator="#query-isbn-spinner">
+            <div class="form-group">
+                <label for="query-isbn-isbn">ISBN:</label>
+                <input type="text" id="query-isbn-isbn" name="isbn" placeholder="9780307474278" required>
+            </div>
+            <button type="submit" class="btn btn-info">
+                Consultar
+                <span id="query-isbn-spinner" class="htmx-indicator spinner"></span>
+            </button>
+        </form>
+        <div id="query-isbn-result" class="result-area"></div>
+    </section>
+
+    <!-- Devolución por ISBN -->
+    <section class="card">
+        <h2>↩️ Devolución por ISBN</h2>
+        <form hx-post="/return-isbn" hx-target="#return-isbn-result" hx-swap="innerHTML" hx-indicator="#return-isbn-spinner">
+            <div class="form-group">
+                <label for="return-isbn-isbn">ISBN:</label>
+                <input type="text" id="return-isbn-isbn" name="isbn" placeholder="9780307474278" required>
+            </div>
+            <button type="submit" class="btn btn-warning">
+                Devolver Libro
+                <span id="return-isbn-spinner" class="htmx-indicator spinner"></span>
+            </button>
+        </form>
+        <div id="return-isbn-result" class="result-area"></div>
+    </section>
+
+</div>
+{% endblock %}

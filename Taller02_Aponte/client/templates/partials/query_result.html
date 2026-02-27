@@ -1,0 +1,26 @@
+{% if result.found %}
+<div class="alert alert-info">
+    <strong>📘 {{ result.message }}</strong>
+    {% if result.book %}
+    <div class="book-details">
+        <table>
+            <tr><th>ISBN</th><td>{{ result.book.ISBN }}</td></tr>
+            <tr><th>Título</th><td>{{ result.book.titulo }}</td></tr>
+            <tr><th>Autores</th><td>{{ result.book.autores | join(", ") }}</td></tr>
+            <tr><th>Estado</th><td>
+                <span class="badge {{ 'badge-available' if result.book.estado == 'no prestado' else 'badge-unavailable' }}">
+                    {{ result.book.estado }}
+                </span>
+            </td></tr>
+            <tr><th>Prestatario</th><td>{{ result.book.prestatario or "—" }}</td></tr>
+            <tr><th>Fecha préstamo</th><td>{{ result.book.fecha_prestamo or "—" }}</td></tr>
+            <tr><th>Fecha devolución</th><td>{{ result.book.fecha_devolucion or "—" }}</td></tr>
+        </table>
+    </div>
+    {% endif %}
+</div>
+{% else %}
+<div class="alert alert-error">
+    <strong>❌ {{ result.message }}</strong>
+</div>
+{% endif %}

@@ -1,0 +1,334 @@
+{
+  "libros": [
+    {
+      "ISBN": "9780307474278",
+      "titulo": "Cien años de soledad",
+      "autores": [
+        "Gabriel García Márquez"
+      ],
+      "estado": "prestado",
+      "prestatario": "Carlos Ramírez",
+      "fecha_prestamo": "2026-02-10",
+      "fecha_devolucion": "2026-02-24"
+    },
+    {
+      "ISBN": "9788437604947",
+      "titulo": "Don Quijote de la Mancha",
+      "autores": [
+        "Miguel de Cervantes"
+      ],
+      "estado": "prestado",
+      "prestatario": "adas",
+      "fecha_prestamo": "2026-02-25",
+      "fecha_devolucion": "2026-03-04"
+    },
+    {
+      "ISBN": "9780451524935",
+      "titulo": "1984",
+      "autores": [
+        "George Orwell"
+      ],
+      "estado": "prestado",
+      "prestatario": "Ana López",
+      "fecha_prestamo": "2026-02-15",
+      "fecha_devolucion": "2026-03-01"
+    },
+    {
+      "ISBN": "9780142437230",
+      "titulo": "Moby Dick",
+      "autores": [
+        "Herman Melville"
+      ],
+      "estado": "no prestado",
+      "prestatario": null,
+      "fecha_prestamo": null,
+      "fecha_devolucion": null
+    },
+    {
+      "ISBN": "9780743273565",
+      "titulo": "El gran Gatsby",
+      "autores": [
+        "F. Scott Fitzgerald"
+      ],
+      "estado": "prestado",
+      "prestatario": "María Torres",
+      "fecha_prestamo": "2026-02-18",
+      "fecha_devolucion": "2026-03-03"
+    },
+    {
+      "ISBN": "9780061120084",
+      "titulo": "Matar a un ruiseñor",
+      "autores": [
+        "Harper Lee"
+      ],
+      "estado": "no prestado",
+      "prestatario": null,
+      "fecha_prestamo": null,
+      "fecha_devolucion": null
+    },
+    {
+      "ISBN": "9780307387899",
+      "titulo": "La carretera",
+      "autores": [
+        "Cormac McCarthy"
+      ],
+      "estado": "prestado",
+      "prestatario": "Jorge Hernández",
+      "fecha_prestamo": "2026-02-12",
+      "fecha_devolucion": "2026-02-26"
+    },
+    {
+      "ISBN": "9788497592208",
+      "titulo": "La sombra del viento",
+      "autores": [
+        "Carlos Ruiz Zafón"
+      ],
+      "estado": "no prestado",
+      "prestatario": null,
+      "fecha_prestamo": null,
+      "fecha_devolucion": null
+    },
+    {
+      "ISBN": "9780618640157",
+      "titulo": "El señor de los anillos",
+      "autores": [
+        "J.R.R. Tolkien"
+      ],
+      "estado": "prestado",
+      "prestatario": "Pedro Sánchez",
+      "fecha_prestamo": "2026-02-05",
+      "fecha_devolucion": "2026-02-20"
+    },
+    {
+      "ISBN": "9780439554930",
+      "titulo": "Harry Potter y la piedra filosofal",
+      "autores": [
+        "J.K. Rowling"
+      ],
+      "estado": "no prestado",
+      "prestatario": null,
+      "fecha_prestamo": null,
+      "fecha_devolucion": null
+    },
+    {
+      "ISBN": "9780307269751",
+      "titulo": "El código Da Vinci",
+      "autores": [
+        "Dan Brown"
+      ],
+      "estado": "prestado",
+      "prestatario": "Laura Díaz",
+      "fecha_prestamo": "2026-02-01",
+      "fecha_devolucion": "2026-02-15"
+    },
+    {
+      "ISBN": "9780140449266",
+      "titulo": "Crimen y castigo",
+      "autores": [
+        "Fiódor Dostoyevski"
+      ],
+      "estado": "no prestado",
+      "prestatario": null,
+      "fecha_prestamo": null,
+      "fecha_devolucion": null
+    },
+    {
+      "ISBN": "9780156012195",
+      "titulo": "El principito",
+      "autores": [
+        "Antoine de Saint-Exupéry"
+      ],
+      "estado": "prestado",
+      "prestatario": "Sofía Morales",
+      "fecha_prestamo": "2026-02-14",
+      "fecha_devolucion": "2026-02-28"
+    },
+    {
+      "ISBN": "9788491050297",
+      "titulo": "Los juegos del hambre",
+      "autores": [
+        "Suzanne Collins"
+      ],
+      "estado": "no prestado",
+      "prestatario": null,
+      "fecha_prestamo": null,
+      "fecha_devolucion": null
+    },
+    {
+      "ISBN": "9780385490818",
+      "titulo": "El alquimista",
+      "autores": [
+        "Paulo Coelho"
+      ],
+      "estado": "prestado",
+      "prestatario": "Diego Vargas",
+      "fecha_prestamo": "2026-02-09",
+      "fecha_devolucion": "2026-02-23"
+    },
+    {
+      "ISBN": "9780141182803",
+      "titulo": "Rebelión en la granja",
+      "autores": [
+        "George Orwell"
+      ],
+      "estado": "no prestado",
+      "prestatario": null,
+      "fecha_prestamo": null,
+      "fecha_devolucion": null
+    },
+    {
+      "ISBN": "9780307743657",
+      "titulo": "El nombre del viento",
+      "autores": [
+        "Patrick Rothfuss"
+      ],
+      "estado": "prestado",
+      "prestatario": "Valentina Ruiz",
+      "fecha_prestamo": "2026-02-11",
+      "fecha_devolucion": "2026-02-25"
+    },
+    {
+      "ISBN": "9788408172173",
+      "titulo": "La casa de los espíritus",
+      "autores": [
+        "Isabel Allende"
+      ],
+      "estado": "no prestado",
+      "prestatario": null,
+      "fecha_prestamo": null,
+      "fecha_devolucion": null
+    },
+    {
+      "ISBN": "9780141439600",
+      "titulo": "Orgullo y prejuicio",
+      "autores": [
+        "Jane Austen"
+      ],
+      "estado": "prestado",
+      "prestatario": "Camila Ortega",
+      "fecha_prestamo": "2026-02-07",
+      "fecha_devolucion": "2026-02-21"
+    },
+    {
+      "ISBN": "9780307476463",
+      "titulo": "La chica del tren",
+      "autores": [
+        "Paula Hawkins"
+      ],
+      "estado": "no prestado",
+      "prestatario": null,
+      "fecha_prestamo": null,
+      "fecha_devolucion": null
+    },
+    {
+      "ISBN": "9780062316110",
+      "titulo": "La ladrona de libros",
+      "autores": [
+        "Markus Zusak"
+      ],
+      "estado": "prestado",
+      "prestatario": "Andrés Mendoza",
+      "fecha_prestamo": "2026-02-16",
+      "fecha_devolucion": "2026-03-02"
+    },
+    {
+      "ISBN": "9788497594257",
+      "titulo": "El perfume",
+      "autores": [
+        "Patrick Süskind"
+      ],
+      "estado": "no prestado",
+      "prestatario": null,
+      "fecha_prestamo": null,
+      "fecha_devolucion": null
+    },
+    {
+      "ISBN": "9780452284234",
+      "titulo": "El guardián entre el centeno",
+      "autores": [
+        "J.D. Salinger"
+      ],
+      "estado": "prestado",
+      "prestatario": "Ricardo Peña",
+      "fecha_prestamo": "2026-02-03",
+      "fecha_devolucion": "2026-02-17"
+    },
+    {
+      "ISBN": "9780143127741",
+      "titulo": "Sapiens",
+      "autores": [
+        "Yuval Noah Harari"
+      ],
+      "estado": "no prestado",
+      "prestatario": null,
+      "fecha_prestamo": null,
+      "fecha_devolucion": null
+    },
+    {
+      "ISBN": "9780307887443",
+      "titulo": "Ready Player One",
+      "autores": [
+        "Ernest Cline"
+      ],
+      "estado": "prestado",
+      "prestatario": "Felipe Castro",
+      "fecha_prestamo": "2026-02-08",
+      "fecha_devolucion": "2026-02-22"
+    },
+    {
+      "ISBN": "9780060850524",
+      "titulo": "Un mundo feliz",
+      "autores": [
+        "Aldous Huxley"
+      ],
+      "estado": "no prestado",
+      "prestatario": null,
+      "fecha_prestamo": null,
+      "fecha_devolucion": null
+    },
+    {
+      "ISBN": "9780143039433",
+      "titulo": "El hobbit",
+      "autores": [
+        "J.R.R. Tolkien"
+      ],
+      "estado": "prestado",
+      "prestatario": "Daniela Flores",
+      "fecha_prestamo": "2026-02-06",
+      "fecha_devolucion": "2026-02-20"
+    },
+    {
+      "ISBN": "9788490628723",
+      "titulo": "El psicoanalista",
+      "autores": [
+        "John Katzenbach"
+      ],
+      "estado": "prestado",
+      "prestatario": "Gabriel Reyes",
+      "fecha_prestamo": "2026-02-23",
+      "fecha_devolucion": "2026-03-09"
+    },
+    {
+      "ISBN": "9780307346605",
+      "titulo": "Los hombres que no amaban a las mujeres",
+      "autores": [
+        "Stieg Larsson"
+      ],
+      "estado": "prestado",
+      "prestatario": "Isabella Navarro",
+      "fecha_prestamo": "2026-02-13",
+      "fecha_devolucion": "2026-02-27"
+    },
+    {
+      "ISBN": "9780062073488",
+      "titulo": "El silencio de los corderos",
+      "autores": [
+        "Thomas Harris"
+      ],
+      "estado": "prestado",
+      "prestatario": "Mateo Guzmán",
+      "fecha_prestamo": "2026-02-23",
+      "fecha_devolucion": "2026-03-09"
+    }
+  ]
+}

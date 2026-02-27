@@ -1,0 +1,9 @@
+{% if result.success %}
+<div class="alert alert-success">
+    <strong>✅ {{ result.message }}</strong>
+</div>
+{% else %}
+<div class="alert alert-error">
+    <strong>❌ {{ result.message }}</strong>
+</div>
+{% endif %}
