@@ -1,0 +1,5 @@
+#mpirun -hostfile hostfiles -np 2 ./exe
+master      slots=9
+nodo0		slots=8
+nodo1       slots=8
+nodo2       slots=8
