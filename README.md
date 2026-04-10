@@ -29,6 +29,7 @@ Para compilar y ejecutar los códigos expuestos en este respositorio necesita:
 | Taller01_Aponte                             | Creación de Cluster y pruebas de rendimiento         |
 | Taller02_Aponte                             | Creación de modelo cliente-servidor usando ZMQ       |
 | Taller03_Aponte                             | Implementación de un sistema de archivos distribuido |
+| Proyecto_Primera_Entrega                    | Proyecto de gestión inteligente de tráfico urbano    |
 ---
 
 ## Desarrollos de contenido
@@ -90,3 +91,23 @@ Todos los archivos se encuentran dentro del directorio `evalMxM_MPI`:
 - `procesosHostfile`: Fichero de configuración que define la distribución de **procesos MPI** por host. Es utilizado por `mpirun` (a través del script `lanzadorMPI.pl`) para indicar cuántos procesos ejecutar en cada nodo del cluster o conjunto de máquinas, permitiendo explorar escenarios de balanceo de carga y afinidad entre procesos y recursos físicos.
 
 - `informeDeRendimiento.pdf`: Documento generado a partir de los resultados obtenidos en `resultadosDAT`. Contiene el análisis de rendimiento del taller: tablas, gráficas y discusión sobre cómo escalan los tiempos de ejecución con el tamaño de la matriz, el número de procesos MPI, el número de hilos OpenMP y las diferentes configuraciones de hostfiles, así como las conclusiones finales del experimento.
+
+### Proyecto_Primera_Entrega
+
+Proyecto en grupo correspondiente a la primera entrega del proyecto del curso, orientado al diseño e implementación de un sistema distribuido de **gestión inteligente de tráfico urbano**. El sistema simula una ciudad en cuadrícula, genera vehículos, captura mediciones de sensores lógicos, calcula analítica de tráfico, controla semáforos y persiste el estado en varios computadores (PC0–PC3) comunicados con ZeroMQ.
+
+#### Directorios y archivos principales
+
+- `common`: Código compartido entre procesos distribuidos. Contiene los **modelos del dominio** (grafo de ciudad, vías, intersecciones, vehículos, simulación), los **contratos de mensajería** (eventos de sensores, comandos semafóricos, snapshots, solicitudes de ambulancia) y **utilidades transversales** (carga de configuración, logs, normalización de sensores, helpers de persistencia SQLite y ZeroMQ).
+
+- `config`: Archivos de configuración global. En particular, `config/system_config.json`, donde se parametrizan el tamaño de la ciudad, intersecciones activas, reglas y pesos de analítica, frecuencia de sensores, parámetros de simulación (reloj, generación de vehículos) y endpoints de comunicación ZeroMQ entre PC0, PC1, PC2 y PC3.
+
+- `PC0`: Componentes responsables de la **simulación autoritativa** del mapa y los vehículos. Genera vehículos que entran por los bordes, actualiza posiciones por ticks, aplica los comandos semafóricos recibidos, instancia ambulancias cuando se solicitan y almacena el **histórico completo** del día de simulación.
+
+- `PC1`: Implementación de los **sensors lógicos** (cámara, espira inductiva y GPS) y del **broker ZeroMQ**. Recibe snapshots del estado actual desde PC0, calcula las mediciones por arista instrumentada y publica eventos hacia PC2 usando PUB/SUB, además de reenviarlos mediante el broker.
+
+- `PC2`: Servicios de **analítica de tráfico y control semafórico**. Se suscribe a los eventos de sensores, calcula scores por vía y por eje en cada intersección, decide fases semafóricas y envía comandos a PC0. Mantiene la **réplica de la base de datos operativa** y expone un **backend de respaldo** para consultas de estado actual cuando PC3 no está disponible.
+
+- `PC3`: Aloja la **base de datos principal** y el **backend primario** para monitoreo, consulta de estado actual, creación de ambulancias y control manual de semáforos. Centraliza la visualización y la interacción de usuario con el sistema, apoyándose en la réplica de PC2 en escenarios de fallo.
+
+- `Scripts`: Conjunto de scripts auxiliares para **automatizar la compilación y/o el arranque coordinado** de los distintos procesos del proyecto, así como la ejecución de escenarios de prueba y experimentos de rendimiento definidos para la primera entrega.
