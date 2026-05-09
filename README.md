@@ -29,6 +29,8 @@ Para compilar y ejecutar los códigos expuestos en este respositorio necesita:
 | Taller01_Aponte                             | Creación de Cluster y pruebas de rendimiento         |
 | Taller02_Aponte                             | Creación de modelo cliente-servidor usando ZMQ       |
 | Taller03_Aponte                             | Implementación de un sistema de archivos distribuido |
+| Taller04_Aponte                             | Prácticas sobre concurrencia y sockets (TCP/UDP/Threads) |
+| Implementacion_HDFS_Aponte-Arboleda-Pico-Ramirez.pdf| Implementación de HDFS |
 | Proyecto_Primera_Entrega                    | Proyecto de gestión inteligente de tráfico urbano    |
 ---
 
@@ -91,6 +93,32 @@ Todos los archivos se encuentran dentro del directorio `evalMxM_MPI`:
 - `procesosHostfile`: Fichero de configuración que define la distribución de **procesos MPI** por host. Es utilizado por `mpirun` (a través del script `lanzadorMPI.pl`) para indicar cuántos procesos ejecutar en cada nodo del cluster o conjunto de máquinas, permitiendo explorar escenarios de balanceo de carga y afinidad entre procesos y recursos físicos.
 
 - `informeDeRendimiento.pdf`: Documento generado a partir de los resultados obtenidos en `resultadosDAT`. Contiene el análisis de rendimiento del taller: tablas, gráficas y discusión sobre cómo escalan los tiempos de ejecución con el tamaño de la matriz, el número de procesos MPI, el número de hilos OpenMP y las diferentes configuraciones de hostfiles, así como las conclusiones finales del experimento.
+
+### Taller04_Aponte
+
+Taller práctico centrado en concurrencia y comunicaciones de red en Java. Incluye dos submódulos independientes: TCP_UDP (ejemplos de sockets TCP y UDP y Makefile para ejecución) y THREADS (ejemplos secuenciales y concurrentes con Threads y Runnable). A continuación se describen las carpetas y ficheros más relevantes incluidos.
+
+- TCP_UDP: ejemplos de cliente/servidor usando sockets TCP y UDP, con utilidades para ejecutar y probar comunicaciones básicas.
+
+  - `cliTCPsocket.java`: cliente TCP que se conecta al puerto 6001 y envía mensajes leídos desde la entrada estándar usando writeUTF.
+  - `serTCPsocket.java`: servidor TCP que escucha en el puerto 6001 y muestra por consola los mensajes recibidos (usa ServerSocket y DataInputStream/readUTF).
+  - `cliUDPsocket.java`: cliente UDP que envía datagramas al puerto 6000 del servidor especificado; lee líneas del usuario y las envía como datagramas.
+  - `serUDPsocket.java`: servidor UDP que escucha en el puerto 6000 y muestra los mensajes recibidos en datagramas.
+  - `Makefile` (dentro de TCP_UDP): reglas para compilar las clases Java y objetivos para ejecutar servidores y clientes UDP/TCP.
+
+- THREADS: ejemplos didácticos para comparar ejecución secuencial y concurrente en Java.
+
+  - `Cliente.java`: modelo de cliente con su carrito (array de tiempos por producto).
+  - `Cajera.java`: implementación secuencial que procesa los productos de un cliente (simula tiempos con Thread.sleep).
+  - `CajeraThread.java`: variante que extiende Thread para procesar un cliente en un hilo independiente (muestra inicio/avance/fin).
+  - `Main.java`: ejecuta la versión secuencial (dos cajeras procesan compras en serie).
+  - `MainThread.java`: arranca dos CajeraThread mediante start() para demostrar paralelismo.
+  - `MainRunnable.java`: ejemplo que usa Runnable y crea hilos con tareas para ejecutar compras en paralelo.
+  - `Makefile` (dentro de THREADS): reglas para compilar y ejecutar las diferentes versiones (secuencial, thread y runnable) y limpiar binarios.
+
+### Implementacion_HDFS_Aponte-Arboleda-Pico-Ramirez.pdf
+
+Documento .pdf que contiene la implementación de un sistema de archivos distribuido inspirado en HDFS, desarrollado como parte de los ejercicios prácticos del curso. El documento detalla el diseño, la arquitectura, los componentes principales y las pruebas realizadas para validar la funcionalidad y el rendimiento del sistema de archivos distribuido implementado.
 
 ### Proyecto_Primera_Entrega
 
