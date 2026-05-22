@@ -144,3 +144,11 @@ Proyecto en grupo correspondiente a la primera entrega del proyecto del curso, o
 ### Proyecto_Entrega_Final
 
 Se completaron todas las funcionalidades restantes del proyecto, incluyendo la implementación de un protocolo de pruebas para validar la correcta integración y funcionamiento de los componentes distribuidos, así como la documentación detallada del proceso de desarrollo, las decisiones de diseño y los resultados obtenidos en las pruebas realizadas. El proyecto final refleja una solución robusta y escalable para la gestión inteligente de tráfico urbano, con especial atención a la resiliencia ante fallos y la eficiencia en la comunicación entre procesos distribuidos.
+
+#### Directorios y archivos principales
+
+- `DesicionesDeDiseno.pdf`: Documento que detalla las decisiones de diseño tomadas durante el desarrollo del proyecto, incluyendo la elección de tecnologías, patrones de arquitectura, estrategias de comunicación y manejo de fallos.
+
+- `Protocolo de pruebas`: Se implementó un protocolo de pruebas exhaustivo que incluye casos de prueba para validar la correcta integración de los componentes distribuidos, la resiliencia ante fallos y la eficiencia en la comunicación. Este protocolo se documenta detalladamente en el informe final, incluyendo los escenarios de prueba, los resultados obtenidos y las conclusiones derivadas de las pruebas realizadas.
+
+- `video.txt`: Archivo que contiene un enlace a un video demostrativo del proyecto en funcionamiento, mostrando la interacción entre los componentes distribuidos y la gestión inteligente de tráfico urbano en acción.
