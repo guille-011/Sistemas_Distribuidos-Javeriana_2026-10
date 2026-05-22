@@ -32,6 +32,7 @@ Para compilar y ejecutar los códigos expuestos en este respositorio necesita:
 | Taller04_Aponte                             | Prácticas sobre concurrencia y sockets (TCP/UDP/Threads) |
 | Implementacion_HDFS_Aponte-Arboleda-Pico-Ramirez.pdf| Implementación de HDFS |
 | Proyecto_Primera_Entrega                    | Proyecto de gestión inteligente de tráfico urbano    |
+| Proyecto_Entrega_Final                      | Implementación completa y protocolo de pruebas    |
 ---
 
 ## Desarrollos de contenido
@@ -139,3 +140,7 @@ Proyecto en grupo correspondiente a la primera entrega del proyecto del curso, o
 - `PC3`: Aloja la **base de datos principal** y el **backend primario** para monitoreo, consulta de estado actual, creación de ambulancias y control manual de semáforos. Centraliza la visualización y la interacción de usuario con el sistema, apoyándose en la réplica de PC2 en escenarios de fallo.
 
 - `Scripts`: Conjunto de scripts auxiliares para **automatizar la compilación y/o el arranque coordinado** de los distintos procesos del proyecto, así como la ejecución de escenarios de prueba y experimentos de rendimiento definidos para la primera entrega.
+
+### Proyecto_Entrega_Final
+
+Se completaron todas las funcionalidades restantes del proyecto, incluyendo la implementación de un protocolo de pruebas para validar la correcta integración y funcionamiento de los componentes distribuidos, así como la documentación detallada del proceso de desarrollo, las decisiones de diseño y los resultados obtenidos en las pruebas realizadas. El proyecto final refleja una solución robusta y escalable para la gestión inteligente de tráfico urbano, con especial atención a la resiliencia ante fallos y la eficiencia en la comunicación entre procesos distribuidos.
